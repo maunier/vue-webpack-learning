@@ -5,28 +5,27 @@ import App from 'components/App';
 import ChannelTitle from 'components/ChannelTitle';
 import ChannelPage from 'components/ChannelPage'; 
 import TestSlot from 'components/TestSlot';
+import Computed from 'components/Computed';
 
 Vue.use(VueRouter);
 
 const routes = [{
 	path: '/',
-	// component: App
-  component: {
-    template: '<div>hello</div>',
-    render: function() {
-      
-    }
-  }
+	component: App
 }, 
-{
-	name: 'channelPage',
-	path: '/:channelName',
-	component: ChannelPage
-},
+// {
+// 	name: 'channelPage',
+// 	path: '/:channelName',
+// 	component: ChannelPage
+// },
  {
   name: 'testSlot',
   path: '/testSlot',
   component: TestSlot
+}, {
+  name: 'testComputedIsInreactive',
+  path: '/computed',
+  component: Computed
 }];
 
 const router = new VueRouter({
